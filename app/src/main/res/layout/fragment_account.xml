@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AccountFragment"
-    android:background="#07A9F5">
+    android:background="#C59E9E">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f00">
+        android:background="#F33D3D">
 
 
         <androidx.appcompat.widget.Toolbar
@@ -30,7 +30,7 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#f00"
+                android:background="#F33D3D"
                 app:tabSelectedTextColor="#000"
                 app:tabTextColor="#fff">
 

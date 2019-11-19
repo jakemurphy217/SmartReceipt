@@ -4,10 +4,10 @@
 
     <item
 
-        android:id="@+id/action_call"
-        android:title="chat"
+        android:id="@+id/account"
+        android:title="account"
         app:showAsAction="ifRoom"
-        android:icon="@android:drawable/sym_action_chat"
+        android:icon="@drawable/ic_action_account"
         />
 
 </menu>

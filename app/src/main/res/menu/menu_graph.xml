@@ -4,10 +4,10 @@
 
     <item
 
-        android:id="@+id/action_call"
-        android:title="call"
+        android:id="@+id/icon"
+        android:title="Graph"
         app:showAsAction="ifRoom"
-        android:icon="@android:drawable/sym_call_outgoing"
+        android:icon="@drawable/ic_action_graph"
         />
 
 </menu>
