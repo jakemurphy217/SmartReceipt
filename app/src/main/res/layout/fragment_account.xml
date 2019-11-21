@@ -7,12 +7,13 @@
     android:background="#C59E9E">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <Button
+        android:id="@+id/btn_sign_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="red fragment"
-        android:textColor="#fff"
-        android:textSize="40sp"
-        android:layout_gravity="center"/>
+        android:text="SignOut"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="404dp" />
 
 </FrameLayout>

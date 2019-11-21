@@ -49,28 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 
-//                switch (tab.getPosition()){
-//                    case 0:
-//                        getWindow().setStatusBarColor(ColorInt);
-//                        toolbar.setBackgroundColor(Color.RED);
-//                        toolbartab.setBackgroundColor(Color.RED);
-//                        tabLayout.setBackgroundColor(Color.RED);
-//                        break;
 //
-//                    case 1:
-//                        getWindow().setStatusBarColor(Color.GREEN);
-//                        toolbar.setBackgroundColor(Color.GREEN);
-//                        toolbartab.setBackgroundColor(Color.GREEN);
-//                        tabLayout.setBackgroundColor(Color.GREEN);
-//                        break;
-//
-//                    case 2:
-//                        getWindow().setStatusBarColor(Color.BLUE);
-//                        toolbar.setBackgroundColor(Color.BLUE);
-//                        toolbartab.setBackgroundColor(Color.BLUE);
-//                        tabLayout.setBackgroundColor(Color.BLUE);
-//                        break;
-//                }
 
             }
 
