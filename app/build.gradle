@@ -30,6 +30,10 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //round pic dependency
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+    //graph library
+    implementation 'com.jjoe64:graphview:4.2.2'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
