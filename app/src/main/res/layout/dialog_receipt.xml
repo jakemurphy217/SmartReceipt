@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
-            android:text="itemReceiptName"
+            android:text="@string/itemReceiptName"
             android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
-            android:text="temReceiptCost"
+            android:text="@string/itemReceiptCost"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
 
@@ -44,7 +44,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:text="Attach Picture" />
+            android:text="@string/AttachPicture" />
+
+        <ImageView
+            android:id="@+id/dialog_displayReceipt"
+            android:layout_width="196dp"
+            android:layout_height="200dp" />
 
 
 

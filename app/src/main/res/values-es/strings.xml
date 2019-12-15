@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recibo inteligente</string>
+
+
+    <string name="signOutBtn">desconectar</string>
+    <string name="profileUserName">Nombre</string>
+    <string name="profileEmail">Email</string>
+    <string name="profilePhoneNum">Número</string>
+    <string name="profilepicdescription">Imagen de usuario</string>
+    <string name="AttachPicture">" Adjuntar imagen"</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="itemReceiptCost">Costo de recibo del artículo</string>
+    <string name="itemReceiptName">Nombre del recibo del artículo</string>
+</resources>

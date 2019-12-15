@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reçu intelligent</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+
+    <string name="signOutBtn">Déconnexion</string>
+    <string name="profileUserName">prénom</string>
+    <string name="profileEmail">Email</string>
+    <string name="profilePhoneNum">Nombre</string>
+    <string name="profilepicdescription">Image utilisateur</string>
+    <string name="itemReceiptName">Nom du reçu</string>
+    <string name="itemReceiptCost">article Coût de réception</string>
+    <string name="AttachPicture">Joindre une photo</string>
+</resources>

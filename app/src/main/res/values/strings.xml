@@ -9,4 +9,7 @@
     <string name="profileEmail">Email</string>
     <string name="profilePhoneNum">Number</string>
     <string name="profilepicdescription">User Image</string>
+    <string name="itemReceiptName">item Receipt Name</string>
+    <string name="itemReceiptCost">item Receipt Cost</string>
+    <string name="AttachPicture">Attach Picture</string>
 </resources>
