@@ -91,7 +91,7 @@ public class ReceiptFragment extends Fragment {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_receipt,container,false);
 
-        myRecyclerView = (RecyclerView) v.findViewById(R.id.receipt_recyclerview);
+        myRecyclerView = v.findViewById(R.id.receipt_recyclerview);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),firstReceipt);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         myRecyclerView.setAdapter(recyclerViewAdapter);

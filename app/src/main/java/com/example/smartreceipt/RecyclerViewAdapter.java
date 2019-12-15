@@ -1,11 +1,16 @@
 package com.example.smartreceipt;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +22,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     Context mContext;
     List<Receipt> mData;
+    Dialog myDialog;
 
     public RecyclerViewAdapter(Context mContext, List<Receipt> mData) {
         this.mContext = mContext;
@@ -28,11 +34,35 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v;
-        v = LayoutInflater.from(mContext).inflate(R.layout.item_receipt,parent,false);
-        MyViewHolder vHolder = new MyViewHolder(v);
+        v = LayoutInflater.from(mContext).inflate(R.layout.item_receipt, parent, false);
+        final MyViewHolder vHolder = new MyViewHolder(v);
+
+        //dialog init
+        myDialog = new Dialog(mContext);
+        myDialog.setContentView(R.layout.dialog_receipt);
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
-         return vHolder;
+        vHolder.item_receipt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                TextView dialog_receiptName_tv = (TextView) myDialog.findViewById(R.id.dialog_receiptName);
+                TextView dialog_receiptCost_tv = (TextView) myDialog.findViewById(R.id.dialog_receiptCost);
+                ImageView dialog_image_tv = (ImageView) myDialog.findViewById(R.id.dialog_receipt_image);
+
+                dialog_receiptName_tv.setText(mData.get(vHolder.getAdapterPosition()).getName());
+                dialog_receiptCost_tv.setText(mData.get(vHolder.getAdapterPosition()).getCost());
+                dialog_image_tv.setImageResource(mData.get(vHolder.getAdapterPosition()).getPhoto());
+
+                //test click
+//                Toast.makeText(mContext, "test click" + String.valueOf(vHolder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                myDialog.show();
+            }
+        });
+
+
+        return vHolder;
     }
 
     @Override
@@ -55,6 +85,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
+        private LinearLayout item_receipt;
+
         private TextView tv_name;
         private TextView tv_cost;
         private ImageView img;
@@ -63,10 +95,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
 
-
-            tv_name = (TextView) itemView.findViewById(R.id.name_receipt);
-            tv_cost = (TextView) itemView.findViewById(R.id.cost_receipt);
-            img = (ImageView) itemView.findViewById(R.id.img_receipt);
+            item_receipt = (LinearLayout) itemView.findViewById(R.id.receipt_item_id);
+            tv_name = itemView.findViewById(R.id.name_receipt);
+            tv_cost = itemView.findViewById(R.id.cost_receipt);
+            img = itemView.findViewById(R.id.img_receipt);
 
         }
     }

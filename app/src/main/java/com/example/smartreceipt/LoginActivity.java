@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btn_sign_out = (Button) findViewById(R.id.btn_sign_out);
+        btn_sign_out = findViewById(R.id.btn_sign_out);
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

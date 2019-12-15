@@ -84,7 +84,7 @@ public class GraphFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_graph, container, false);
 
-        GraphView spendingGraph = (GraphView) view.findViewById(R.id.spendingGraph);
+        GraphView spendingGraph = view.findViewById(R.id.spendingGraph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
