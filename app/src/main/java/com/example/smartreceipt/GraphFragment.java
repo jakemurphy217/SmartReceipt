@@ -34,7 +34,7 @@ public class GraphFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
+    //Graph arraylist that will store all the points on the graph
     LineGraphSeries<DataPoint> series;
 
 
@@ -87,7 +87,11 @@ public class GraphFragment extends Fragment {
 
 
         GraphView spendingGraph = view.findViewById(R.id.spendingGraph);
+
+        //plotting the graph
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+
+                //data points on the graph
                 new DataPoint(0, 800),
                 new DataPoint(1, 15),
                 new DataPoint(2, 50),

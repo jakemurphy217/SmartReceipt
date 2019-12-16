@@ -32,7 +32,10 @@ import java.util.List;
 public class ReceiptFragment extends Fragment {
 
     View v;
+    //declaring recyclerview
     private RecyclerView myRecyclerView;
+
+    //declaring receipt arraylist
     private List<Receipt> firstReceipt;
 
 
@@ -41,13 +44,6 @@ public class ReceiptFragment extends Fragment {
 //    private EditText EditTextInsert;
 //    private EditText EditTextRemove;
 
-
-
-
-    public static final String EXTRA_INFO = "default";
-    private Button btnCapture;
-    private ImageView imgCapture;
-    private static final int Image_Capture_Code = 1;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -152,6 +148,8 @@ public class ReceiptFragment extends Fragment {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_receipt,container,false);
 
+
+        //recyelerview being displayed on the receipt fragment
         myRecyclerView = v.findViewById(R.id.receipt_recyclerview);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),firstReceipt);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
