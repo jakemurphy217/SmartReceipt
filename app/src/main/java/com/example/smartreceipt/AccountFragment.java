@@ -1,23 +1,28 @@
 package com.example.smartreceipt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+
+import java.util.List;
 
 
 public class AccountFragment extends Fragment {
@@ -29,6 +34,10 @@ public class AccountFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private static final int MY_REQUEST_CODE = 7117;
+    List<AuthUI.IdpConfig> providers;
+    Button btn_sign_out;
 
     private OnFragmentInteractionListener mListener;
 
@@ -57,10 +66,34 @@ public class AccountFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+
+//the sign out button would not logout the current user the SetContentView() would not work as it is in a fragment and returning the Activity
+        //page would not work aswell so i had to comment it out to stop the app from crashing
+
+
+//        btn_sign_out = getView().findViewById(R.id.btn_sign_out);
+//        btn_sign_out.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AuthUI.getInstance().signOut(LoginActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//
+//                        btn_sign_out.setEnabled(false);
+//
+//
+//                    }
+//                }).addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Toast.makeText(LoginActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//            }
+//
+//        });
+
 
 
 

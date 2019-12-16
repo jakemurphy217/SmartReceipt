@@ -13,6 +13,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,20 @@ public class ReceiptFragment extends Fragment {
     View v;
     private RecyclerView myRecyclerView;
     private List<Receipt> firstReceipt;
+
+
+//    private  Button ButtonInert;
+//    private  Button ButtonRemove;
+//    private EditText EditTextInsert;
+//    private EditText EditTextRemove;
+
+
+
+
+    public static final String EXTRA_INFO = "default";
+    private Button btnCapture;
+    private ImageView imgCapture;
+    private static final int Image_Capture_Code = 1;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -69,11 +86,9 @@ public class ReceiptFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
 
 
+            //hardcoding items to the array list
             firstReceipt = new ArrayList<>();
             firstReceipt.add(new Receipt("brown thomas","€800",R.drawable.shoppingcart));
             firstReceipt.add(new Receipt("5 guys", "€15",R.drawable.fork));
@@ -82,7 +97,53 @@ public class ReceiptFragment extends Fragment {
             firstReceipt.add(new Receipt("plain tickets", "€5",R.drawable.plane));
             firstReceipt.add(new Receipt("work lunch","€500",R.drawable.fork));
 
-//        }
+
+            //creating buttons and edit text fields to add and delete from the firstreceipt arraylist
+
+
+//            ButtonInert = getView().findViewById(R.id.button_insertReceipt);
+//            ButtonRemove = getView().findViewById(R.id.button_removeReceipt);
+//
+//            EditTextInsert = getView().findViewById(R.id.editReceipt_insert);
+//            EditTextRemove = getView().findViewById(R.id.editReceipt_remove);
+
+
+//            ButtonInert.setOnClickListener(new View.OnClickListener(){
+//                @Override
+//               public void onClick(View v){
+//
+//                    int position = Integer.parseInt(EditTextInsert.getText().toString());
+//                    insertReceipt(position);
+//
+//                }
+//            });
+//
+//            ButtonRemove.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    int position = Integer.parseInt(EditTextRemove.getText().toString());
+//                    removeReceipt(position);
+//                }
+//            });
+
+//    }
+
+        //this was me trying to develop an insertreceipt class which would add items to the arraylist
+
+//    public void insertReceipt(int position){
+////
+//        firstReceipt.add(position, new Receipt("college","20" + position, R.drawable.ic_android));
+//        mAdapter.notifyDataSetChanged();
+//    }
+
+        // this was going to delete items from the arraylist
+//
+//    public void removeReceipt(int position){
+//
+//        firstReceipt.remove(position);
+//        mAdapter.notifyDataSetChanged();
+//
+
     }
 
     @Override
@@ -98,6 +159,11 @@ public class ReceiptFragment extends Fragment {
 
 
         setHasOptionsMenu(true);
+
+
+
+
+
 
 //        return inflater.inflate(R.layout.fragment_receipt, container, false);
         return v;

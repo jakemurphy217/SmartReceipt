@@ -7,26 +7,12 @@
     android:background="#C59E9E">
 
     <!-- TODO: Update blank fragment layout -->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="red fragment"-->
-<!--        android:textColor="#fff"-->
-<!--        android:textSize="40sp"-->
-<!--        android:layout_gravity="center"/>-->
 
-<!--    <com.jjoe64.graphview.GraphView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/spendingGraph">-->
-
-<!--    </com.jjoe64.graphview.GraphView>-->
 
     <com.jjoe64.graphview.GraphView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         android:id="@+id/spendingGraph"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="horizontal" />
 
 </RelativeLayout>

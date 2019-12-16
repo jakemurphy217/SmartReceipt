@@ -8,80 +8,42 @@
     tools:context=".AccountFragment">
 
 
-    <!--        <ImageView-->
-    <!--            android:id="@+id/imageView"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_alignParentStart="true"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:layout_alignParentEnd="true"-->
-    <!--            android:layout_alignParentBottom="true"-->
-    <!--            android:layout_marginStart="146dp"-->
-    <!--            android:layout_marginTop="114dp"-->
-    <!--            android:layout_marginEnd="138dp"-->
-    <!--            android:layout_marginBottom="490dp"-->
-    <!--            android:background="@drawable/user"-->
-    <!--            android:contentDescription="@string/profilepicdescription"-->
-    <!--            app:srcCompat="@drawable/user"-->
-    <!--            tools:srcCompat="@drawable/user" />-->
-
-
-    <EditText
-        android:id="@+id/editText"
+    <Button
+        android:id="@+id/btn_sign_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="161dp"
+        android:text="@string/signOutBtn" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="82dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/profileUserName" />
+        android:text="Name" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editName"
+        android:text="@string/profileEmail"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/profileEmail" />
-
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:text="@string/profilePhoneNum" />
-
-        <Button
-            android:id="@+id/SignoutBTN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="167dp"
-            android:layout_marginTop="632dp"
-            android:layout_marginEnd="156dp"
-            android:layout_marginBottom="51dp"
-            android:text="@string/signOutBtn" />
+        android:inputType="textEmailAddress" />
 
 
 </RelativeLayout>

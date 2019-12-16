@@ -2,11 +2,14 @@ package com.example.smartreceipt;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,6 +26,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context mContext;
     List<Receipt> mData;
     Dialog myDialog;
+
 
     public RecyclerViewAdapter(Context mContext, List<Receipt> mData) {
         this.mContext = mContext;
@@ -55,11 +59,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 dialog_receiptCost_tv.setText(mData.get(vHolder.getAdapterPosition()).getCost());
                 dialog_image_tv.setImageResource(mData.get(vHolder.getAdapterPosition()).getPhoto());
 
+
+
                 //test click
 //                Toast.makeText(mContext, "test click" + String.valueOf(vHolder.getAdapterPosition()), Toast.LENGTH_SHORT).show();
                 myDialog.show();
             }
         });
+
 
 
         return vHolder;
